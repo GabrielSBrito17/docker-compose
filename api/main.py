@@ -45,7 +45,15 @@ def consult_db(sql):
     con.close()
     return registros
 
-reg = consult_db('select * from cars')
-df_bd = pd.DataFrame(reg, columns=["id", "colors", "models", "owner_id"])
-print(df_bd)
+
+
+# sql = """
+#     INSERT into public.deputados (id, colors, models, owner_id) value
+#     values('%s','%s','%s','%s','%s','%s','%s','%s','%s');
+#     """
+# insert_db(sql)
+
+# reg = consult_db('select * from cars')
+# df_bd = pd.DataFrame(reg, columns=["id", "colors", "models", "owner_id"])
+# print(df_bd)
 # print('conectado')
