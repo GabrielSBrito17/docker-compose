@@ -3,5 +3,7 @@ from pydantic import BaseModel
 
 class Owner(BaseModel):
     id: str
-    colors: int
-    models: int
+    name: Optional[str]
+    qtd_cars: Optional[int]
+    colors: Optional[int]
+    models: Optional[int]

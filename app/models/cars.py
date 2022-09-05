@@ -3,6 +3,6 @@ from pydantic import BaseModel
 
 class Car(BaseModel):
     id: str
-    colors: int
-    models: int
-    id_owner: str
+    colors: Optional[int]
+    models: Optional[int]
+    id_owner: Optional[str]
