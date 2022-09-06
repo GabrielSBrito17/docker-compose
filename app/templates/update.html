@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <meta charset='utf-8'>
+    <title>Cadastro de pessoas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container-sm">
+    <div class="row">
+      <h1>Cadastrar Pessoas</h1>
+  <div class="col-4">
+    <form action="{{pessoa[0]['CPF']}}" method="POST">
+        <div class="mb-3">
+          <label for="name" class="form-label">NOME</label>
+          <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp">
+          value='{{pessoa[0]["NOME"]}}'
+          readonly>
+          </div>
+        <div class="mb-3">
+          <label for="colors_cars" class="form-label">COR DO CARRO</label>
+          <input type="text" class="form-control" id="colors_cars" name="colors_cars">
+          name=nome
+          value='{{pessoa[0]["Nome"]}}'>
+        </div>
+        <div class="mb-3">
+            <label for="models_cars" class="form-label">MODELO DO CARRO</label>
+            <input type="text" class="form-control" id="models_cars" name="models_cars">
+            name="dataNascimento"
+            value='{{pessoa[0]["DataNascimento"]}}'>
+          </div>
+        <button type="submit" class="btn btn-primary"><i class="bi bi-arrow-clockwise"> </i>Atualizar</button>
+      </form>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

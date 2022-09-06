@@ -22,7 +22,7 @@ def create_db(sql):
     con.close()
     return print("sucesso")
 
-def insert_db(id, name, qtd_cars, models, colors):
+def insert_db(id=None, name=None, qtd_cars=None, models=None, colors=None):
     con = conn_db()
     cur = con.cursor()
     try:
@@ -49,8 +49,30 @@ def consult_db(table):
     con.close()
     return df.to_json()
 
-db = consult_db("owners")
-print(db)
+def filter_db(filter):
+    con = conn_db()
+    cur = con.cursor()
+    sql = f'''select id, name, quantity_cars, model_cars, colors_cars from owners where name in ('{filter}')'''
+    cur.execute(sql)
+    recset = cur.fetchall()
+    df = pd.DataFrame(recset, columns=["id", "name", "quantity_cars", "model_cars", "colors_cars"])
+    return df
+
+def delete_db(filter):
+    con = conn_db()
+    cur = con.cursor()
+    try:
+        sql = f"""DELETE FROM owners WHERE name = '{filter}';"""
+        cur.execute(sql)
+    except Exception as e:
+        print(e)
+    # recset = cur.fetchall()
+    # df = pd.DataFrame(recset, columns=["id", "name", "quantity_cars", "model_cars", "colors_cars"])
+    return "Deletou"
+
+
+# db = filter_db("gabriel")
+# print(db)
 # sql = '''CREATE TABLE cars
 #       ( id            character varying(500),
 #         colors           character varying(500),
