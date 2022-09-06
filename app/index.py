@@ -8,6 +8,9 @@ while True:
   try:
     owner = str(input("Nome do proprietário: "))
     people = main.filter_db(f"{owner}")
+    for pessoas in people:
+      print(people[0])
+    people.id += 1
     if people.name.empty is False:
       cars = int(input("Possui quantos carros?: "))
       qtd_cars = main.filter_db(f"{owner}")
@@ -33,13 +36,13 @@ while True:
         while True:
           models = str(input("Qual desses modelos de carro deseja?(Hatch, Sedan, Conversível): "))
           model = main.filter_db(f"{owner}")
-          if model.models_cars[0] == models:
+          if model.model_cars[0] == models:
             print("Você já possui carro desse modelo, tente outro.")
           else:
-            main.update_db("models_cars", models, people.id[0])
+            main.update_db("model_cars", models, people.id[0])
             break
     else:
-      people_id = people.id[0] + 1
+      people_id = people.id
       qtd_cars = 1
       main.insert_db(id=people_id, name=f"{owner}", qtd_cars="null", models="null", colors="null")
       while True:
@@ -48,12 +51,12 @@ while True:
         if color_car.colors_cars[0] == colors:
           print("Você já possui carro dessa cor, tente outra.")
         else:
-          main.update_db("colors_cars", colors, people.id[0])
+          main.update_db("colors_cars", colors, people_id)
           break
       while True:
         models = str(input("Qual desses modelos de carro deseja?(Hatch, Sedan, Conversível): "))
         model = main.filter_db(f"{owner}")
-        if model.models_cars[0] == models:
+        if model.model_cars[0] == models:
           print("Você já possui carro desse modelo, tente outro.")
         else:
           main.update_db("models_cars", models, people.id[0])

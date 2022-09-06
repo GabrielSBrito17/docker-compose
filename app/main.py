@@ -14,20 +14,30 @@ def conn_db():
     conn = psycopg2.connect(conn_string)
     return conn
 
-def create_db(sql):
+def create_db_init(sql):
     con = conn_db()
     cur = con.cursor()
     cur.execute(sql)
     con.commit()
     con.close()
-    return print("sucesso")
+    return print("Criou o banco com sucesso!")
+
+def create_db(sql):
+    con = conn_db()
+    cur = con.cursor()
+    cur.execute(sql)
+    con.commit()
+    recset = cur.fetchall()
+    df = pd.DataFrame(recset, columns=[str("id"), "name", "quantity_cars", "model_cars", "colors_cars"])
+    con.close()
+    return df.to_json()
 
 def insert_db(id=None, name=None, qtd_cars=None, models=None, colors=None):
     con = conn_db()
     cur = con.cursor()
     count = id
     try:
-        sql = f'''insert into owners (id, name, quantity_cars, model_cars, colors_cars) values ('{int(id)}','{name}', '{int(qtd_cars)}', '{models}', '{colors}')'''
+        sql = f'''insert into owners (id, name, quantity_cars, model_cars, colors_cars) values ('{id}','{name}', '{qtd_cars}', '{models}', '{colors}')'''
         cur.execute(sql)
     except (Exception, psycopg2.DatabaseError) as error:
         print("Error: %s" % error)
@@ -85,11 +95,11 @@ def update_db(data, value, id):
 
 
 # sql = '''CREATE TABLE owners
-#       ( id            character varying(500),
-#         name           character varying(500),
-#         quantity_cars          character varying(500),
-#         model_cars  character varying(500),
-#         colors_cars  character varying(500),
+#       ( id            integer,
+#         name           varchar,
+#         quantity_cars          integer,
+#         model_cars  varchar,
+#         colors_cars  varchar,
 #         PRIMARY KEY (ID)
 #       )'''
-# create_db(sql)
+# create_db_init(sql)
