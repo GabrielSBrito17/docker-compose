@@ -1,0 +1,319 @@
+people = {DataFrame: (1, 5)} id     name quantity_cars model_cars colors_cars [0  1  gabriel             2      hatch      yellow]
+ T = {DataFrame: (5, 1)} 0 [id                   1] [name           gabriel] [quantity_cars        2] [model_cars       hatch] [colors_cars     yellow]
+  T = {DataFrame: (1, 5)} id     name quantity_cars model_cars colors_cars [0  1  gabriel             2      hatch      yellow]
+  at = {_AtIndexer} <pandas.core.indexing._AtIndexer object at 0x0000026D250BDB20>
+  attrs = {dict: 0} {}
+  axes = {list: 2} [Index(['id', 'name', 'quantity_cars', 'model_cars', 'colors_cars'], dtype='object'), RangeIndex(start=0, stop=1, step=1)]
+  columns = {RangeIndex: (1,)} RangeIndex(start=0, stop=1, step=1)
+  dtypes = {Series: (1,)} (0, dtype('O'))
+  empty = {bool} False
+  flags = {Flags} <Flags(allows_duplicate_labels=True)>
+  iat = {_iAtIndexer} <pandas.core.indexing._iAtIndexer object at 0x0000026D250BEA20>
+  iloc = {_iLocIndexer} <pandas.core.indexing._iLocIndexer object at 0x0000026D250BF330>
+  index = {Index: (5,)} Index(['id', 'name', 'quantity_cars', 'model_cars', 'colors_cars'], dtype='object')
+  loc = {_LocIndexer} <pandas.core.indexing._LocIndexer object at 0x0000026D250BF5B0>
+  ndim = {int} 2
+  plot = {PlotAccessor} <pandas.plotting._core.PlotAccessor object at 0x0000026D2507E2F0>
+  shape = {tuple: 2} (5, 1)
+  size = {int32: ()} 5
+  style = {Styler} <pandas.io.formats.style.Styler object at 0x0000026D250ADED0>
+  values = {ndarray: (5, 1)} [[Decimal('1')], ['gabriel'], [Decimal('2')], ['hatch'], ['yellow']]
+ at = {_AtIndexer} <pandas.core.indexing._AtIndexer object at 0x0000026D24EDF650>
+  name = {str} 'at'
+  ndim = {int} 2
+  obj = {DataFrame: (1, 5)} id     name quantity_cars model_cars colors_cars [0  1  gabriel             2      hatch      yellow]
+ attrs = {dict: 0} {}
+  __len__ = {int} 0
+ axes = {list: 2} [RangeIndex(start=0, stop=1, step=1), Index(['id', 'name', 'quantity_cars', 'model_cars', 'colors_cars'], dtype='object')]
+  0 = {RangeIndex: (1,)} RangeIndex(start=0, stop=1, step=1)
+  1 = {Index: (5,)} Index(['id', 'name', 'quantity_cars', 'model_cars', 'colors_cars'], dtype='object')
+  __len__ = {int} 2
+ colors_cars = {Series: (1,)} (0, 'yellow')
+  T = {Series: (1,)} (0, 'yellow')
+  array = {PandasArray: (1,)} <PandasArray>\n['yellow']\nLength: 1, dtype: object
+  at = {_AtIndexer} <pandas.core.indexing._AtIndexer object at 0x0000026D250BE610>
+  attrs = {dict: 0} {}
+  axes = {list: 1} [RangeIndex(start=0, stop=1, step=1)]
+  dtype = {dtype[object_]: ()} object
+  dtypes = {dtype[object_]: ()} object
+  empty = {bool} False
+  flags = {Flags} <Flags(allows_duplicate_labels=True)>
+  hasnans = {bool} False
+  iat = {_iAtIndexer} <pandas.core.indexing._iAtIndexer object at 0x0000026D250BD440>
+  iloc = {_iLocIndexer} <pandas.core.indexing._iLocIndexer object at 0x0000026D250BE700>
+  index = {RangeIndex: (1,)} RangeIndex(start=0, stop=1, step=1)
+  is_monotonic = {bool} True
+  is_monotonic_decreasing = {bool} True
+  is_monotonic_increasing = {bool} True
+  is_unique = {bool} True
+  loc = {_LocIndexer} <pandas.core.indexing._LocIndexer object at 0x0000026D250BF240>
+  name = {str} 'colors_cars'
+  nbytes = {int} 8
+  ndim = {int} 1
+  plot = {PlotAccessor} <pandas.plotting._core.PlotAccessor object at 0x0000026D250ACAF0>
+  shape = {tuple: 1} 1
+  size = {int} 1
+  str = {StringMethods} <pandas.core.strings.accessor.StringMethods object at 0x0000026D250AFD00>
+  values = {ndarray: (1,)} ['yellow']
+ columns = {Index: (5,)} Index(['id', 'name', 'quantity_cars', 'model_cars', 'colors_cars'], dtype='object')
+  T = {Index: (5,)} Index(['id', 'name', 'quantity_cars', 'model_cars', 'colors_cars'], dtype='object')
+  array = {PandasArray: (5,)} <PandasArray>\n['id', 'name', 'quantity_cars', 'model_cars', 'colors_cars']\nLength: 5, dtype: object
+  asi8 = {NoneType} None
+  dtype = {dtype[object_]: ()} object
+  empty = {bool} False
+  has_duplicates = {bool} False
+  hasnans = {bool} False
+  inferred_type = {str} 'string'
+  is_all_dates = {bool} False
+  is_monotonic = {bool} False
+  is_monotonic_decreasing = {bool} False
+  is_monotonic_increasing = {bool} False
+  is_unique = {bool} True
+  name = {NoneType} None
+  names = {FrozenList: 1} [None]
+  nbytes = {int} 40
+  ndim = {int} 1
+  nlevels = {int} 1
+  shape = {tuple: 1} 5
+  size = {int} 5
+  str = {StringMethods} <pandas.core.strings.accessor.StringMethods object at 0x0000026D250AC520>
+  values = {ndarray: (5,)} ['id' 'name' 'quantity_cars' 'model_cars' 'colors_cars']
+ dtypes = {Series: (5,)} ('id', dtype('O')) ('name', dtype('O')) ('quantity_cars', dtype('O')) ('model_cars', dtype('O')) ('colors_cars', dtype('O'))
+  T = {Series: (5,)} ('id', dtype('O')) ('name', dtype('O')) ('quantity_cars', dtype('O')) ('model_cars', dtype('O')) ('colors_cars', dtype('O'))
+  array = {PandasArray: (5,)} <PandasArray>\n[dtype('O'), dtype('O'), dtype('O'), dtype('O'), dtype('O')]\nLength: 5, dtype: object
+  at = {_AtIndexer} <pandas.core.indexing._AtIndexer object at 0x0000026D24F126B0>
+  attrs = {dict: 0} {}
+  axes = {list: 1} [Index(['id', 'name', 'quantity_cars', 'model_cars', 'colors_cars'], dtype='object')]
+  colors_cars = {dtype[object_]: ()} object
+  dtype = {dtype[object_]: ()} object
+  dtypes = {dtype[object_]: ()} object
+  empty = {bool} False
+  flags = {Flags} <Flags(allows_duplicate_labels=True)>
+  hasnans = {bool} False
+  iat = {_iAtIndexer} <pandas.core.indexing._iAtIndexer object at 0x0000026D25097240>
+  id = {dtype[object_]: ()} object
+  iloc = {_iLocIndexer} <pandas.core.indexing._iLocIndexer object at 0x0000026D25097DD0>
+  index = {Index: (5,)} Index(['id', 'name', 'quantity_cars', 'model_cars', 'colors_cars'], dtype='object')
+  is_monotonic = {bool} True
+  is_monotonic_decreasing = {bool} True
+  is_monotonic_increasing = {bool} True
+  is_unique = {bool} False
+  loc = {_LocIndexer} <pandas.core.indexing._LocIndexer object at 0x0000026D25096ED0>
+  model_cars = {dtype[object_]: ()} object
+  name = {NoneType} None
+  nbytes = {int} 40
+  ndim = {int} 1
+  plot = {PlotAccessor} <pandas.plotting._core.PlotAccessor object at 0x0000026D250AFF40>
+  quantity_cars = {dtype[object_]: ()} object
+  shape = {tuple: 1} 5
+  size = {int} 5
+  str = {StringMethods} <pandas.core.strings.accessor.StringMethods object at 0x0000026D250AF9D0>
+  values = {ndarray: (5,)} [dtype('O') dtype('O') dtype('O') dtype('O') dtype('O')]
+ empty = {bool} False
+ flags = {Flags} <Flags(allows_duplicate_labels=True)>
+  allows_duplicate_labels = {bool} True
+ iat = {_iAtIndexer} <pandas.core.indexing._iAtIndexer object at 0x0000026D25097A10>
+  name = {str} 'iat'
+  ndim = {int} 2
+  obj = {DataFrame: (1, 5)} id     name quantity_cars model_cars colors_cars [0  1  gabriel             2      hatch      yellow]
+ id = {Series: (1,)} (0, Decimal('1'))
+  T = {Series: (1,)} (0, Decimal('1'))
+  array = {PandasArray: (1,)} <PandasArray>\n[Decimal('1')]\nLength: 1, dtype: object
+  at = {_AtIndexer} <pandas.core.indexing._AtIndexer object at 0x0000026D250BE200>
+  attrs = {dict: 0} {}
+  axes = {list: 1} [RangeIndex(start=0, stop=1, step=1)]
+  dtype = {dtype[object_]: ()} object
+  dtypes = {dtype[object_]: ()} object
+  empty = {bool} False
+  flags = {Flags} <Flags(allows_duplicate_labels=True)>
+  hasnans = {bool} False
+  iat = {_iAtIndexer} <pandas.core.indexing._iAtIndexer object at 0x0000026D250964D0>
+  iloc = {_iLocIndexer} <pandas.core.indexing._iLocIndexer object at 0x0000026D25097B00>
+  index = {RangeIndex: (1,)} RangeIndex(start=0, stop=1, step=1)
+  is_monotonic = {bool} True
+  is_monotonic_decreasing = {bool} True
+  is_monotonic_increasing = {bool} True
+  is_unique = {bool} True
+  loc = {_LocIndexer} <pandas.core.indexing._LocIndexer object at 0x0000026D25096FC0>
+  name = {str} 'id'
+  nbytes = {int} 8
+  ndim = {int} 1
+  plot = {PlotAccessor} <pandas.plotting._core.PlotAccessor object at 0x0000026D250ADFF0>
+  shape = {tuple: 1} 1
+  size = {int} 1
+  values = {ndarray: (1,)} [Decimal('1')]
+ iloc = {_iLocIndexer} <pandas.core.indexing._iLocIndexer object at 0x0000026D250BC7C0>
+  axis = {NoneType} None
+  name = {str} 'iloc'
+  ndim = {int} 2
+  obj = {DataFrame: (1, 5)} id     name quantity_cars model_cars colors_cars [0  1  gabriel             2      hatch      yellow]
+ index = {RangeIndex: (1,)} RangeIndex(start=0, stop=1, step=1)
+  T = {RangeIndex: (1,)} RangeIndex(start=0, stop=1, step=1)
+  array = {PandasArray: (1,)} <PandasArray>\n[0]\nLength: 1, dtype: int64
+  asi8 = {NoneType} None
+  dtype = {dtype[int64]: ()} int64
+  empty = {bool} False
+  has_duplicates = {bool} False
+  hasnans = {bool} False
+  inferred_type = {str} 'integer'
+  is_all_dates = {bool} False
+  is_monotonic = {bool} True
+  is_monotonic_decreasing = {bool} True
+  is_monotonic_increasing = {bool} True
+  is_unique = {bool} True
+  name = {NoneType} None
+  names = {FrozenList: 1} [None]
+  nbytes = {int} 128
+  ndim = {int} 1
+  nlevels = {int} 1
+  shape = {tuple: 1} 1
+  size = {int} 1
+  start = {int} 0
+  step = {int} 1
+  stop = {int} 1
+  values = {ndarray: (1,)} [0]
+ loc = {_LocIndexer} <pandas.core.indexing._LocIndexer object at 0x0000026D250979C0>
+  axis = {NoneType} None
+  name = {str} 'loc'
+  ndim = {int} 2
+  obj = {DataFrame: (1, 5)} id     name quantity_cars model_cars colors_cars [0  1  gabriel             2      hatch      yellow]
+ model_cars = {Series: (1,)} (0, 'hatch')
+  T = {Series: (1,)} (0, 'hatch')
+  array = {PandasArray: (1,)} <PandasArray>\n['hatch']\nLength: 1, dtype: object
+  at = {_AtIndexer} <pandas.core.indexing._AtIndexer object at 0x0000026D24F10680>
+  attrs = {dict: 0} {}
+  axes = {list: 1} [RangeIndex(start=0, stop=1, step=1)]
+  dtype = {dtype[object_]: ()} object
+  dtypes = {dtype[object_]: ()} object
+  empty = {bool} False
+  flags = {Flags} <Flags(allows_duplicate_labels=True)>
+  hasnans = {bool} False
+  iat = {_iAtIndexer} <pandas.core.indexing._iAtIndexer object at 0x0000026D250BECF0>
+  iloc = {_iLocIndexer} <pandas.core.indexing._iLocIndexer object at 0x0000026D250BF5B0>
+  index = {RangeIndex: (1,)} RangeIndex(start=0, stop=1, step=1)
+  is_monotonic = {bool} True
+  is_monotonic_decreasing = {bool} True
+  is_monotonic_increasing = {bool} True
+  is_unique = {bool} True
+  loc = {_LocIndexer} <pandas.core.indexing._LocIndexer object at 0x0000026D250BF100>
+  name = {str} 'model_cars'
+  nbytes = {int} 8
+  ndim = {int} 1
+  plot = {PlotAccessor} <pandas.plotting._core.PlotAccessor object at 0x0000026D2507F130>
+  shape = {tuple: 1} 1
+  size = {int} 1
+  str = {StringMethods} <pandas.core.strings.accessor.StringMethods object at 0x0000026D2507F100>
+  values = {ndarray: (1,)} ['hatch']
+ name = {Series: (1,)} (0, 'gabriel')
+  T = {Series: (1,)} (0, 'gabriel')
+  array = {PandasArray: (1,)} <PandasArray>\n['gabriel']\nLength: 1, dtype: object
+  at = {_AtIndexer} <pandas.core.indexing._AtIndexer object at 0x0000026D25096E30>
+  attrs = {dict: 0} {}
+  axes = {list: 1} [RangeIndex(start=0, stop=1, step=1)]
+  dtype = {dtype[object_]: ()} object
+  dtypes = {dtype[object_]: ()} object
+  empty = {bool} False
+  flags = {Flags} <Flags(allows_duplicate_labels=True)>
+  hasnans = {bool} False
+  iat = {_iAtIndexer} <pandas.core.indexing._iAtIndexer object at 0x0000026D250BE7A0>
+  iloc = {_iLocIndexer} <pandas.core.indexing._iLocIndexer object at 0x0000026D250BF290>
+  index = {RangeIndex: (1,)} RangeIndex(start=0, stop=1, step=1)
+  is_monotonic = {bool} True
+  is_monotonic_decreasing = {bool} True
+  is_monotonic_increasing = {bool} True
+  is_unique = {bool} True
+  loc = {_LocIndexer} <pandas.core.indexing._LocIndexer object at 0x0000026D250BD0D0>
+  name = {str} 'name'
+  nbytes = {int} 8
+  ndim = {int} 1
+  plot = {PlotAccessor} <pandas.plotting._core.PlotAccessor object at 0x0000026D250AC400>
+  shape = {tuple: 1} 1
+  size = {int} 1
+  str = {StringMethods} <pandas.core.strings.accessor.StringMethods object at 0x0000026D250ADC30>
+  values = {ndarray: (1,)} ['gabriel']
+ ndim = {int} 2
+ plot = {PlotAccessor} <pandas.plotting._core.PlotAccessor object at 0x0000026D24EEE170>
+ quantity_cars = {Series: (1,)} (0, Decimal('2'))
+  T = {Series: (1,)} (0, Decimal('2'))
+  array = {PandasArray: (1,)} <PandasArray>\n[Decimal('2')]\nLength: 1, dtype: object
+  at = {_AtIndexer} <pandas.core.indexing._AtIndexer object at 0x0000026D250BC310>
+  attrs = {dict: 0} {}
+  axes = {list: 1} [RangeIndex(start=0, stop=1, step=1)]
+  dtype = {dtype[object_]: ()} object
+  dtypes = {dtype[object_]: ()} object
+  empty = {bool} False
+  flags = {Flags} <Flags(allows_duplicate_labels=True)>
+  hasnans = {bool} False
+  iat = {_iAtIndexer} <pandas.core.indexing._iAtIndexer object at 0x0000026D250BEED0>
+  iloc = {_iLocIndexer} <pandas.core.indexing._iLocIndexer object at 0x0000026D250BD0D0>
+  index = {RangeIndex: (1,)} RangeIndex(start=0, stop=1, step=1)
+  is_monotonic = {bool} True
+  is_monotonic_decreasing = {bool} True
+  is_monotonic_increasing = {bool} True
+  is_unique = {bool} True
+  loc = {_LocIndexer} <pandas.core.indexing._LocIndexer object at 0x0000026D250BDB20>
+  name = {str} 'quantity_cars'
+  nbytes = {int} 8
+  ndim = {int} 1
+  plot = {PlotAccessor} <pandas.plotting._core.PlotAccessor object at 0x0000026D250AE830>
+  shape = {tuple: 1} 1
+  size = {int} 1
+  values = {ndarray: (1,)} [Decimal('2')]
+ shape = {tuple: 2} (1, 5)
+  0 = {int} 1
+  1 = {int} 5
+  __len__ = {int} 2
+ size = {int32: ()} 5
+  T = {int32: ()} 5
+  base = {NoneType} None
+  data = {memoryview: ()} <memory at 0x0000026D250B85E0>
+  denominator = {int} 1
+  dtype = {dtype[int32]: ()} int32
+  flags = {flagsobj}   C_CONTIGUOUS : True\n  F_CONTIGUOUS : True\n  OWNDATA : True\n  WRITEABLE : False\n  ALIGNED : True\n  WRITEBACKIFCOPY : False\n
+  flat = {flatiter: 1} <numpy.flatiter object at 0x0000026D0C35D150>
+  imag = {int32: ()} 0
+  itemsize = {int} 4
+  nbytes = {int} 4
+  ndim = {int} 0
+  numerator = {int32: ()} 5
+  real = {int32: ()} 5
+  shape = {tuple: 0} ()
+  size = {int} 1
+  strides = {tuple: 0} ()
+ style = {Styler} <pandas.io.formats.style.Styler object at 0x0000026D250AC730>
+  caption = {NoneType} None
+  cell_context = {defaultdict: 0} defaultdict(<class 'str'>, {})
+  cell_ids = {bool} True
+  columns = {Index: (5,)} Index(['id', 'name', 'quantity_cars', 'model_cars', 'colors_cars'], dtype='object')
+  css = {dict: 10} {'row_heading': 'row_heading', 'col_heading': 'col_heading', 'index_name': 'index_name', 'col': 'col', 'row': 'row', 'col_trim': 'col_trim', 'row_trim': 'row_trim', 'level': 'level', 'data': 'data', 'blank': 'blank'}
+  ctx = {defaultdict: 0} defaultdict(<class 'list'>, {})
+  ctx_columns = {defaultdict: 0} defaultdict(<class 'list'>, {})
+  ctx_index = {defaultdict: 0} defaultdict(<class 'list'>, {})
+  data = {DataFrame: (1, 5)} id     name quantity_cars model_cars colors_cars [0  1  gabriel             2      hatch      yellow]
+  env = {Environment} <jinja2.environment.Environment object at 0x0000026D2507DC60>
+  hidden_columns = {list: 0} []
+  hidden_rows = {list: 0} []
+  hide_column_names = {bool} False
+  hide_columns_ = {list: 1} [False]
+  hide_index_ = {list: 1} [False]
+  hide_index_names = {bool} False
+  index = {RangeIndex: (1,)} RangeIndex(start=0, stop=1, step=1)
+  loader = {PackageLoader} <jinja2.loaders.PackageLoader object at 0x0000026D2507DAE0>
+  na_rep = {NoneType} None
+  precision = {NoneType} None
+  table_attributes = {NoneType} None
+  table_styles = {NoneType} None
+  template_html = {Template} <Template 'html.tpl'>
+  template_html_style = {Template} <Template 'html_style.tpl'>
+  template_html_table = {Template} <Template 'html_table.tpl'>
+  template_latex = {Template} <Template 'latex.tpl'>
+  tooltips = {NoneType} None
+  uuid = {str} 'c76f5'
+  uuid_len = {int} 5
+ values = {ndarray: (1, 5)} [[Decimal('1') 'gabriel' Decimal('2') 'hatch' 'yellow']]
+  min = {str} 'not a numeric object'
+  max = {str} 'not a numeric object'
+  shape = {tuple: 2} (1, 5)
+  dtype = {dtype[object_]: ()} object
+  size = {int} 5
+  array = {NdArrayItemsContainer} <pydevd_plugins.extensions.types.pydevd_plugin_numpy_types.NdArrayItemsContainer object at 0x0000026D250AD570>

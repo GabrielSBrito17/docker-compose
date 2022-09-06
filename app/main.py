@@ -39,21 +39,21 @@ def insert_db(id=None, name=None, qtd_cars=None, models=None, colors=None):
     con.close()
     return df.to_json()
 
-def consult_db(data, table):
+def consult_db(data, value):
     con = conn_db()
     cur = con.cursor()
-    sql = f'''select * from owners where '{data}' in '{table}' '''
+    sql = f'''select * from owners where '{data}' in ('{value}') '''
     cur.execute(sql)
     con.commit()
     recset = cur.fetchall()
-    df = pd.DataFrame(recset, columns=["id", "name", "quantity_cars", "model_cars", "colors_cars"])
+    df = pd.DataFrame(recset, columns=[f"{data}"])
     con.close()
     return df.to_json()
 
 def filter_db(filter):
     con = conn_db()
     cur = con.cursor()
-    sql = f'''select '{filter}' from owners '''
+    sql = f'''select id, name, quantity_cars, model_cars, colors_cars from owners where name in ('{filter}')'''
     cur.execute(sql)
     con.commit()
     recset = cur.fetchall()
@@ -74,16 +74,16 @@ def delete_db(filter):
     con.close()
     return "Deletou"
 
-def update_db(sale, name):
+def update_db(data, value, id):
     con = conn_db()
     cur = con.cursor()
-    sql = f'''UPDATE owners SET quantity_cars = {sale} WHERE id = '{name}' '''
+    sql = f'''UPDATE owners SET {data} = '{str(value)}' WHERE id = '{id}' '''
     cur.execute(sql)
     con.commit()
     con.close()
     return "Atualizado com sucesso!!"
 
-# db = update_db(2, 1)
+# db = consult_db("quantity_cars", 2)
 # print(db)
 # sql = '''CREATE TABLE cars
 #       ( id            character varying(500),
