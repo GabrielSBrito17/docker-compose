@@ -83,33 +83,13 @@ def update_db(data, value, id):
     con.close()
     return "Atualizado com sucesso!!"
 
-# db = consult_db("quantity_cars", 2)
-# print(db)
-# sql = '''CREATE TABLE cars
-#       ( id            character varying(500),
-#         colors           character varying(500),
-#         models          character varying(500),
-#         owner_id  character varying(500),
-#         PRIMARY KEY (ID)
-#       )'''
-# create_db(sql)
-# sql = '''CREATE TABLE owners
-#       ( id            character varying(500),
-#         name           character varying(500),
-#         quantity_cars          character varying(500),
-#         model_cars  character varying(500),
-#         colors_cars  character varying(500),
-#         PRIMARY KEY (ID)
-#       )'''
-# create_db(sql)
 
-# sql = """
-#     INSERT into public.deputados (id, colors, models, owner_id) value
-#     values('%s','%s','%s','%s','%s','%s','%s','%s','%s');
-#     """
-# insert_db(sql)
-
-# reg = consult_db('select * from cars')
-# df_bd = pd.DataFrame(reg, columns=["id", "colors", "models", "owner_id"])
-# print(df_bd)
-# print('conectado')
+sql = '''CREATE TABLE owners
+      ( id            character varying(500),
+        name           character varying(500),
+        quantity_cars          character varying(500),
+        model_cars  character varying(500),
+        colors_cars  character varying(500),
+        PRIMARY KEY (ID)
+      )'''
+create_db(sql)
