@@ -26,37 +26,36 @@ def insert_db(id=None, name=None, qtd_cars=None, models=None, colors=None):
     con = conn_db()
     cur = con.cursor()
     count = id
-    for i in count:
-        i += 1
-        try:
-            sql = f'''insert into owners (id, name, quantity_cars, model_cars, colors_cars) values ('{id+i}','{name}', '{qtd_cars}', '{models}', '{colors}'''
-            cur.execute(sql)
-            con.commit()
-        except (Exception, psycopg2.DatabaseError) as error:
-            print("Error: %s" % error)
-            con.rollback()
-            cur.close()
-            return 1
-    cur.close()
-
-def consult_db(table):
-    con = conn_db()
-    cur = con.cursor()
-    sql = f'''select * from {table}'''
-    cur.execute(sql)
+    try:
+        sql = f'''insert into owners (id, name, quantity_cars, model_cars, colors_cars) values ('{int(id)}','{name}', '{int(qtd_cars)}', '{models}', '{colors}')'''
+        cur.execute(sql)
+    except (Exception, psycopg2.DatabaseError) as error:
+        print("Error: %s" % error)
+        con.rollback()
+        cur.close()
+        return 1
     recset = cur.fetchall()
     df = pd.DataFrame(recset, columns=["id", "name", "quantity_cars", "model_cars", "colors_cars"])
-    # registros = []
-    # for rec in recset:
-    #     registros.append(rec)
+    con.close()
+    return df.to_json()
+
+def consult_db(data, table):
+    con = conn_db()
+    cur = con.cursor()
+    sql = f'''select * from owners where '{data}' in '{table}' '''
+    cur.execute(sql)
+    con.commit()
+    recset = cur.fetchall()
+    df = pd.DataFrame(recset, columns=["id", "name", "quantity_cars", "model_cars", "colors_cars"])
     con.close()
     return df.to_json()
 
 def filter_db(filter):
     con = conn_db()
     cur = con.cursor()
-    sql = f'''select id, name, quantity_cars, model_cars, colors_cars from owners where name in ('{filter}')'''
+    sql = f'''select '{filter}' from owners '''
     cur.execute(sql)
+    con.commit()
     recset = cur.fetchall()
     df = pd.DataFrame(recset, columns=["id", "name", "quantity_cars", "model_cars", "colors_cars"])
     return df
@@ -65,16 +64,26 @@ def delete_db(filter):
     con = conn_db()
     cur = con.cursor()
     try:
-        sql = f"""DELETE FROM owners WHERE name = '{filter}';"""
+        sql = f"""DELETE FROM owners WHERE id = '{str(filter)}';"""
         cur.execute(sql)
+        con.commit()
     except Exception as e:
         print(e)
     # recset = cur.fetchall()
     # df = pd.DataFrame(recset, columns=["id", "name", "quantity_cars", "model_cars", "colors_cars"])
+    con.close()
     return "Deletou"
 
+def update_db(sale, name):
+    con = conn_db()
+    cur = con.cursor()
+    sql = f'''UPDATE owners SET quantity_cars = {sale} WHERE id = '{name}' '''
+    cur.execute(sql)
+    con.commit()
+    con.close()
+    return "Atualizado com sucesso!!"
 
-# db = filter_db("gabriel")
+# db = update_db(2, 1)
 # print(db)
 # sql = '''CREATE TABLE cars
 #       ( id            character varying(500),
