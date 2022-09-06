@@ -25,15 +25,18 @@ def create_db(sql):
 def insert_db(id=None, name=None, qtd_cars=None, models=None, colors=None):
     con = conn_db()
     cur = con.cursor()
-    try:
-        sql = f'''insert into owners (id, name, quantity_cars, model_cars, colors_cars) values ('{id}','{name}', '{qtd_cars}', '{models}', '{colors}'''
-        cur.execute(sql)
-        con.commit()
-    except (Exception, psycopg2.DatabaseError) as error:
-        print("Error: %s" % error)
-        con.rollback()
-        cur.close()
-        return 1
+    count = id
+    for i in count:
+        i += 1
+        try:
+            sql = f'''insert into owners (id, name, quantity_cars, model_cars, colors_cars) values ('{id+i}','{name}', '{qtd_cars}', '{models}', '{colors}'''
+            cur.execute(sql)
+            con.commit()
+        except (Exception, psycopg2.DatabaseError) as error:
+            print("Error: %s" % error)
+            con.rollback()
+            cur.close()
+            return 1
     cur.close()
 
 def consult_db(table):

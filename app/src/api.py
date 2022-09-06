@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
-from app.index import *
+from app.models.owner import Owner
+import app.main as main
 
 app = Flask(__name__)
 
@@ -37,7 +38,6 @@ def register_owner():
         return list(reg)
     except Exception as e:
         print(e)
-
 
 if __name__ == '__main__':
     app.run(debug=True)
