@@ -1,4 +1,5 @@
 import psycopg2
+import json
 import pandas as pd
 
 host = '172.20.48.1'
@@ -21,10 +22,11 @@ def create_db(sql):
     con.close()
     return print("sucesso")
 
-def insert_db(sql):
+def insert_db(id, name, qtd_cars, models, colors):
     con = conn_db()
     cur = con.cursor()
     try:
+        sql = f'''insert into owners (id, name, quantity_cars, model_cars, colors_cars) values ('{id}','{name}', '{qtd_cars}', '{models}', '{colors}'''
         cur.execute(sql)
         con.commit()
     except (Exception, psycopg2.DatabaseError) as error:
@@ -34,17 +36,21 @@ def insert_db(sql):
         return 1
     cur.close()
 
-def consult_db(sql):
+def consult_db(table):
     con = conn_db()
     cur = con.cursor()
+    sql = f'''select * from {table}'''
     cur.execute(sql)
     recset = cur.fetchall()
-    registros = []
-    for rec in recset:
-        registros.append(rec)
+    df = pd.DataFrame(recset, columns=["id", "name", "quantity_cars", "model_cars", "colors_cars"])
+    # registros = []
+    # for rec in recset:
+    #     registros.append(rec)
     con.close()
-    return registros
+    return df.to_json()
 
+db = consult_db("owners")
+print(db)
 # sql = '''CREATE TABLE cars
 #       ( id            character varying(500),
 #         colors           character varying(500),
