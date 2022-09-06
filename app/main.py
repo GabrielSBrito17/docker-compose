@@ -84,12 +84,12 @@ def update_db(data, value, id):
     return "Atualizado com sucesso!!"
 
 
-sql = '''CREATE TABLE owners
-      ( id            character varying(500),
-        name           character varying(500),
-        quantity_cars          character varying(500),
-        model_cars  character varying(500),
-        colors_cars  character varying(500),
-        PRIMARY KEY (ID)
-      )'''
-create_db(sql)
+# sql = '''CREATE TABLE owners
+#       ( id            character varying(500),
+#         name           character varying(500),
+#         quantity_cars          character varying(500),
+#         model_cars  character varying(500),
+#         colors_cars  character varying(500),
+#         PRIMARY KEY (ID)
+#       )'''
+# create_db(sql)
